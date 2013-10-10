@@ -1,0 +1,25 @@
+{
+  "name": "digger-ntp",
+  "version": "0.0.1",
+  "description": "Get the time from digger",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binocarlos/digger-ntp.git"
+  },
+  "keywords": [
+    "digger",
+    "ntp"
+  ],
+  "author": "Kai Davenport",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binocarlos/digger-ntp/issues"
+  },
+  "dependencies": {
+    "sntp": "~1.0.1"
+  }
+}
