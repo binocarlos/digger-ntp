@@ -20,6 +20,7 @@
     "url": "https://github.com/binocarlos/digger-ntp/issues"
   },
   "dependencies": {
-    "sntp": "~1.0.1"
+    "sntp": "~1.0.1",
+    "digger-supplier": "~0.1.7"
   }
 }

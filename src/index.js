@@ -24,9 +24,6 @@ var ntp_options = {
     timeout: 1000                   // Defaults to zero (no timeout)
 };
 
-
-var async = require('async');
-
 module.exports = function(options){
 
 	options = options || {};
@@ -35,19 +32,21 @@ module.exports = function(options){
 
 	supplier.on('select', function(req, reply){
 
-		/*
+		
 		Sntp.time(options, function (err, time) {
 
 	    if (err) {
-        console.log('Failed: ' + err.message);
-        process.exit(1);
+	    	reply(err.message);
 	    }
-
-	    console.log('Local clock is off by: ' + time.t + ' milliseconds');
-	    process.exit(0);
+	    else{
+	    	var local = new Date().getTime();
+	    	var adjusted = Math.round(local + time.t);
+	    	time.local = local;
+	    	time.adjusted = adjusted;
+	    	reply(null, [time]);
+	    }
 		});
-		*/
-		reply(null, []);
+		
 	})
 
 	return supplier;
